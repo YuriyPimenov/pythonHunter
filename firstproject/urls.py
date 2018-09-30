@@ -19,8 +19,8 @@ from django.urls import path,include
 from django.conf.urls.static import static
 from django.conf import settings
 # from testurlmap import views
-from teststaticapp import views
-# from firstapp import views
+#from teststaticapp import views
+from firstapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
