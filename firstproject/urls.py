@@ -26,7 +26,10 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('authapp/', views.authapp_home, name='authapp-home'),
     path('authapp/login/', auth_views.login,{'template_name':'authapp/login.html'}, name='authapp-login'),
+    path('authapp/logout/', auth_views.logout,{'next_page':'/'}, name='authapp-logout'),
+    
     # re_path(r'^(?P<pizza_id>\d+)/$', views.pizza_detail, name='pizza_detail'),
     # path('formpage', views.form_page, name='form-page'),
     # path('', views.index, name='index'),
